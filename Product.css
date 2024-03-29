@@ -87,6 +87,12 @@ h2 {
   transform: translateY(-50%);
   text-align: center;
 }
+.correct {
+  color: rgb(49, 177, 49);
+}
+.incorrect {
+  color: red;
+}
 .next1,
 .next,
 #next,
