@@ -105,6 +105,14 @@ function disableRadio() {
   for (var i = 0; i < radios.length; i++) {
     radios[i].disabled = true;
   }
+  var radios = document.getElementsByName("question2");
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].disabled = true;
+  }
+  var radios = document.getElementsByName("question3");
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].disabled = true;
+  }
 }
 function disableTextArea() {
   var radios = document.getElementsByName("essayResponse");
