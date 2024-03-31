@@ -23,7 +23,7 @@
     <!-- Button to show the pop-up -->
     <button
       id="start"
-      onclick="showPopup(); showX(); LoadResults(); showwrong1(); removenext1(); hidetitle()"
+      onclick="showPopup(); showX(); LoadResults(); showwrong1(); removenext1(); hidetitle(); removeback()"
     >
       <p>Start Test</p>
     </button>
@@ -70,7 +70,9 @@
         </p>
       </div>
       <button class="next1" onclick="nextPart(1)">Next</button>
-      <button class="next" onclick="nextPart(1); showwrong2()">Next</button>
+      <button class="next" onclick="nextPart(1); showwrong2(); removeback()">
+        Next
+      </button>
       <span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
 
@@ -115,9 +117,10 @@
           Your answer was incorrect
         </p>
       </div>
-      <button id="back" onclick="previousPart(2)">Previous</button>
+      <button class="back" onclick="previousPart(2)">Previous</button>
       <button class="next1" onclick="nextPart(2)">Next</button>
-      <button class="next" onclick="nextPart(2); showwrong3()">Next</button
+      <button class="next" onclick="nextPart(2); showwrong3(); removeback()">
+        Next</button
       ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
 
@@ -161,54 +164,154 @@
           Your answer was incorrect
         </p>
       </div>
-      <button id="back" onclick="previousPart(3)">Previous</button
-      ><button id="next" onclick="nextPart(3)">Next</button
+      <button class="back" onclick="previousPart(3)">Previous</button
+      ><button class="next1" onclick="nextPart(3)">Next</button>
+      <button class="next" onclick="nextPart(3); showwrong4(); removeback()">
+        Next</button
       ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
-
-    <!-- Pop-up content - Part 4 -->
+    <!-- Pop-up content - Operation Math Slice -->
+    <!-- Pop-up content - Part 4-->
     <div id="popupContent4" class="popup-content">
       <h2>Question 4</h2>
-      <p class="question">
-        If you have LED lightbulbs at use, what are the advantages and
-        disadvantages you observed?
+      <p class="questionmath">
+        The Incandescent bulb uses 50 watts per hour. How many watts will be
+        used if it is left on for 24 hours?
       </p>
-      <textarea
-        class="essay-input"
-        name="essayResponse"
-        placeholder="Type your essay here"
-      ></textarea>
+      <input type="text" />
       <div class="results">
-        <p id="essay_check">Not yet Graded</p>
+        <p class="correct" id="correctpopupContent4">
+          Your answer was correct!
+        </p>
+        <p class="incorrect" id="incorrectpopupContent4">
+          Your answer was incorrect
+        </p>
       </div>
-      <button id="back" onclick="previousPart(4)">Previous</button
-      ><button id="next" onclick="nextPart(4); showwrong4()">Next</button
+      <button class="back" onclick="previousPart(4)">Previous</button
+      ><button class="next1" onclick="nextPart(4)">Next</button>
+      <button class="next" onclick="nextPart(4); showwrong5(); removeback()">
+        Next</button
       ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
-    <!-- Pop-up content - Part 5 -->
+    <!-- Pop-up content - Part 5-->
     <div id="popupContent5" class="popup-content">
       <h2>Question 5</h2>
-      <p class="question">
-        Are LED lightbulbs beneficial or harmful to our environment?
+      <p class="questionmath">
+        50 watts is used per hour for the Incandescent light bulb. If
+        electricity consumption needs to be shortened, how much watts will be
+        used if it only lasts for 8 hours?
       </p>
-      <textarea
-        class="essay-input"
-        name="essayResponse"
-        placeholder="Type your essay here"
-      ></textarea>
+      <input type="text" />
       <div class="results">
-        <p id="essay_check">Not yet Graded</p>
+        <p class="correct" id="correctpopupContent5">
+          Your answer was correct!
+        </p>
+        <p class="incorrect" id="incorrectpopupContent5">
+          Your answer was incorrect
+        </p>
       </div>
-      <button id="back" onclick="previousPart(5)">Previous</button
-      ><button id="next" onclick="nextPart(5); disableRadio()">Next</button
+      <button class="back" onclick="previousPart(5)">Previous</button
+      ><button class="next1" onclick="nextPart(5)">Next</button>
+      <button class="next" onclick="nextPart(5); showwrong6(); removeback()">
+        Next</button
       ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
-    <!-- Pop-up content - Part 6 -->
+    <!-- Pop-up content - Part 6-->
     <div id="popupContent6" class="popup-content">
       <h2>Question 6</h2>
+      <p class="questionmath">
+        50 watts is burned per hour for the incandescent light bulb. Plants
+        typically need 14 hours of light a day. How much watts is burned for 14
+        hours?
+      </p>
+      <input type="text" />
+      <div class="results">
+        <p class="correct" id="correctpopupContent6">
+          Your answer was correct!
+        </p>
+        <p class="incorrect" id="incorrectpopupContent6">
+          Your answer was incorrect
+        </p>
+      </div>
+      <button class="back" onclick="previousPart(6)">Previous</button
+      ><button class="next1" onclick="nextPart(6)">Next</button>
+      <button class="next" onclick="nextPart(6); showwrong7(); removeback()">
+        Next</button
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
+    </div>
+    <!-- Pop-up content - Part 7-->
+    <div id="popupContent7" class="popup-content">
+      <h2>Question 7</h2>
+      <p class="questionmath">
+        The LED light bulb uses 9 watts per hour. How many watts will be used if
+        it is left on for 24 hours?
+      </p>
+      <input type="text" />
+      <div class="results">
+        <p class="correct" id="correctpopupContent7">
+          Your answer was correct!
+        </p>
+        <p class="incorrect" id="incorrectpopupContent7">
+          Your answer was incorrect
+        </p>
+      </div>
+      <button class="back" onclick="previousPart(7)">Previous</button
+      ><button class="next1" onclick="nextPart(7)">Next</button>
+      <button class="next" onclick="nextPart(7); showwrong8(); removeback()">
+        Next</button
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
+    </div>
+    <!-- Pop-up content - Part 8-->
+    <div id="popupContent8" class="popup-content">
+      <h2>Question 8</h2>
       <p class="question">
-        What other benefits do LED lightbulbs have, besides producing artificial
-        light to our homes?
+        9 watts is used regularly for the LED light bulb. If electricity
+        consumption needs to be shortened, how much watts will be used if it
+        only lasts for 8 hours?
+      </p>
+      <input type="text" />
+      <div class="results">
+        <p class="correct" id="correctpopupContent8">
+          Your answer was correct!
+        </p>
+        <p class="incorrect" id="incorrectpopupContent8">
+          Your answer was incorrect
+        </p>
+      </div>
+      <button class="back" onclick="previousPart(8)">Previous</button
+      ><button class="next1" onclick="nextPart(8)">Next</button>
+      <button class="next" onclick="nextPart(8); showwrong9(); removeback()">
+        Next</button
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
+    </div>
+    <!-- Pop-up content - Part 9-->
+    <div id="popupContent9" class="popup-content">
+      <h2>Question 9</h2>
+      <p class="question">
+        9 watts is burned per hour for the LED light bulb. Plants typically need
+        14 hours of light a day. How much watts is burned for 14 hours?
+      </p>
+      <input type="text" />
+
+      <div class="results">
+        <p class="correct" id="correctpopupContent9">
+          Your answer was correct!
+        </p>
+        <p class="incorrect" id="incorrectpopupContent9">
+          Your answer was incorrect
+        </p>
+      </div>
+      <button class="back" onclick="previousPart(9)">Previous</button
+      ><button class="next1" onclick="nextPart(9)">Next</button>
+      <button class="next" onclick="nextPart(9); ">Next</button
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
+    </div>
+    <!-- Pop-up content - Part 10 -->
+    <div id="popupContent10" class="popup-content">
+      <h2>Question 10</h2>
+      <p class="question">
+        What are some advantages and disadvantages you've observed while using
+        LED bulbs?
       </p>
       <textarea
         class="essay-input"
@@ -216,12 +319,49 @@
         placeholder="Type your essay here"
       ></textarea>
       <div class="results">
-        <p id="essay_check">Not yet Graded</p>
+        <p class="essay_check">Not yet Graded</p>
       </div>
-      <button id="back" onclick="previousPart(6)">Previous</button>
+      <button class="back" onclick="previousPart(10)">Previous</button
+      ><button id="next" onclick="nextPart(10)">Next</button
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
+    </div>
+    <!-- Pop-up content - Part 11 -->
+    <div id="popupContent11" class="popup-content">
+      <h2>Question 11</h2>
+      <p class="question">
+        Are LED lightbulbs beneficial to our environment or not?
+      </p>
+      <textarea
+        class="essay-input"
+        name="essayResponse"
+        placeholder="Type your essay here"
+      ></textarea>
+      <div class="results">
+        <p class="essay_check">Not yet Graded</p>
+      </div>
+      <button class="back" onclick="previousPart(11)">Previous</button
+      ><button id="next" onclick="nextPart(11); disableRadio()">Next</button
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
+    </div>
+    <!-- Pop-up content - Part 12 -->
+    <div id="popupContent12" class="popup-content">
+      <h2>Question 12</h2>
+      <p class="question">
+        What other benefits do LED lightbulbs have, besides producing artificial
+        light?
+      </p>
+      <textarea
+        class="essay-input"
+        name="essayResponse"
+        placeholder="Type your essay here"
+      ></textarea>
+      <div class="results">
+        <p class="essay_check">Not yet Graded</p>
+      </div>
+      <button class="back" onclick="previousPart(12)">Previous</button>
       <button
         id="submit"
-        onclick="showPopup(); showX(); hidePopup6(); hidesubmit(); showfinish(); showResults(); removenext(); disableTextArea()"
+        onclick="showPopup(); showX(); hidePopup12(); hidesubmit(); showfinish(); showResults(); removenext(); disableTextArea(); giveback()"
       >
         Submit
       </button>
