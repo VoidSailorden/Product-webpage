@@ -23,7 +23,7 @@
     <!-- Button to show the pop-up -->
     <button
       id="start"
-      onclick="showPopup(); showX(); LoadResults(); showwrong1(); removenext1()"
+      onclick="showPopup(); showX(); LoadResults(); showwrong1(); removenext1(); hidetitle()"
     >
       <p>Start Test</p>
     </button>
@@ -71,7 +71,7 @@
       </div>
       <button class="next1" onclick="nextPart(1)">Next</button>
       <button class="next" onclick="nextPart(1); showwrong2()">Next</button>
-      <span id="X" onclick="hidePopup()">×</span>
+      <span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
 
     <!-- Pop-up content - Part 2 -->
@@ -118,7 +118,7 @@
       <button id="back" onclick="previousPart(2)">Previous</button>
       <button class="next1" onclick="nextPart(2)">Next</button>
       <button class="next" onclick="nextPart(2); showwrong3()">Next</button
-      ><span id="X" onclick="hidePopup()">×</span>
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
 
     <!-- Pop-up content - Part 3 -->
@@ -163,7 +163,7 @@
       </div>
       <button id="back" onclick="previousPart(3)">Previous</button
       ><button id="next" onclick="nextPart(3)">Next</button
-      ><span id="X" onclick="hidePopup()">×</span>
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
 
     <!-- Pop-up content - Part 4 -->
@@ -183,7 +183,7 @@
       </div>
       <button id="back" onclick="previousPart(4)">Previous</button
       ><button id="next" onclick="nextPart(4); showwrong4()">Next</button
-      ><span id="X" onclick="hidePopup()">×</span>
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
     <!-- Pop-up content - Part 5 -->
     <div id="popupContent5" class="popup-content">
@@ -201,7 +201,7 @@
       </div>
       <button id="back" onclick="previousPart(5)">Previous</button
       ><button id="next" onclick="nextPart(5); disableRadio()">Next</button
-      ><span id="X" onclick="hidePopup()">×</span>
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
     <!-- Pop-up content - Part 6 -->
     <div id="popupContent6" class="popup-content">
@@ -226,7 +226,7 @@
         Submit
       </button>
       <button id="finish" onclick="hidePopup(); restartWebsite()">Finish</button
-      ><span id="X" onclick="hidePopup(); ">×</span>
+      ><span id="X" onclick="hidePopup(); showtitle()">×</span>
     </div>
     <script src="Product.js"></script>
   </body>
