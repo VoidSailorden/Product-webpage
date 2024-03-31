@@ -59,6 +59,11 @@ h2 {
   margin-top: 2.4%;
   font-size: 2vw;
 }
+.questionmath {
+  text-align: center;
+  margin-top: 2.4%;
+  font-size: 2vw;
+}
 .choice1,
 .choice2 {
   position: absolute;
@@ -69,6 +74,13 @@ h2 {
 }
 .choice2 {
   left: 55.3%;
+}
+input[type="text"] {
+  font-size: 5vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 #start {
@@ -96,6 +108,9 @@ h2 {
 .incorrect {
   color: red;
 }
+.essaycheck {
+  top: 90%;
+}
 .next1,
 .next,
 #next,
@@ -108,7 +123,8 @@ h2 {
   border-radius: 12px;
   font-size: 2.7vh;
 }
-#back {
+#back,
+.back {
   position: absolute;
   top: 94%;
   left: 10px;
@@ -172,6 +188,10 @@ textarea {
     text-wrap: wrap;
   }
   .question {
+    text-wrap: wrap;
+    font-size: 3.5vw;
+  }
+  .questionmath {
     text-wrap: wrap;
     font-size: 3.5vw;
   }
