@@ -10,6 +10,38 @@
       href="https://fonts.googleapis.com/css?family=Varela Round"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "-BOoOQDPH8Zy-jmrA",
+        });
+      })();
+    </script>
+    <script>
+      // Function to send email
+      function SendMail() {
+        var params = {
+          from_name: document.getElementById("name").value,
+          message1: document.getElementById("essay-input1").value,
+          message2: document.getElementById("essay-input2").value,
+          message3: document.getElementById("essay-input3").value,
+        };
+        emailjs.send("service_u12a8mh", "template_wpi03ai", params).then(
+          function (response) {
+            console.log("Email sent successfully:", response);
+            alert("Quiz Has Been Submitted!");
+          },
+          function (error) {
+            console.error("Email send failed:", error);
+            alert("Failed to send email. Please try again later.");
+          }
+        );
+      }
+    </script>
   </head>
   <body>
     <h1 id="title">
@@ -23,11 +55,19 @@
     <!-- Button to show the pop-up -->
     <button
       id="start"
-      onclick="showPopup(); showX(); LoadResults(); showwrong1(); removenext1(); hidetitle(); removeback()"
+      onclick="showPopup(); showX(); LoadResults(); removenext1(); hidetitle(); removeback()"
     >
       <p>Start Test</p>
     </button>
     <!-- Username -->
+    <div id="popupContent0" class="popup-content">
+      <div class="centered-input">
+        <input type="text" id="name" placeholder="enter name" />
+      </div>
+      <button class="next1" onclick="nextPart(0)">Next</button>
+      <button class="next" onclick="nextPart(0); showwrong1()">Next</button>
+      <span id="X" onclick="hidePopup(); showtitle()">×</span>
+    </div>
     <!-- Pop-up content - Part 1 -->
     <div id="popupContent1" class="popup-content">
       <h2>Question 1</h2>
@@ -314,7 +354,7 @@
         LED bulbs?
       </p>
       <textarea
-        class="essay-input"
+        id="essay-input1"
         name="essayResponse"
         placeholder="Type your essay here"
       ></textarea>
@@ -332,7 +372,7 @@
         Are LED lightbulbs beneficial to our environment or not?
       </p>
       <textarea
-        class="essay-input"
+        id="essay-input2"
         name="essayResponse"
         placeholder="Type your essay here"
       ></textarea>
@@ -351,7 +391,7 @@
         light?
       </p>
       <textarea
-        class="essay-input"
+        id="essay-input3"
         name="essayResponse"
         placeholder="Type your essay here"
       ></textarea>
@@ -361,7 +401,7 @@
       <button class="back" onclick="previousPart(12)">Previous</button>
       <button
         id="submit"
-        onclick="showPopup(); showX(); hidePopup12(); hidesubmit(); showfinish(); showResults(); removenext(); disableTextArea(); giveback()"
+        onclick="showPopup(); showX(); hidePopup12(); hidesubmit(); showfinish(); showResults(); removenext(); disableTextArea(); giveback(); disableTextInput(); SendMail()"
       >
         Submit
       </button>
