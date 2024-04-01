@@ -10,7 +10,7 @@ function showtitle() {
 }
 // Function to show the pop-up
 function showPopup() {
-  document.getElementById("popupContent1").style.display = "block";
+  document.getElementById("popupContent0").style.display = "block";
 }
 function showX() {
   document.getElementById("X").style.display = "block";
@@ -278,6 +278,7 @@ function disableTextInput() {
 }
 // Function to hide the pop-up
 function hidePopup() {
+  document.getElementById("popupContent0").style.display = "none";
   document.getElementById("popupContent1").style.display = "none";
   document.getElementById("popupContent2").style.display = "none";
   document.getElementById("popupContent3").style.display = "none";
