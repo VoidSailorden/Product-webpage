@@ -265,6 +265,17 @@ function disableTextArea() {
     radios[i].disabled = true;
   }
 }
+// Function to disable input fields of type text
+function disableTextInput() {
+  // Get all input elements
+  var inputFields = document.getElementsByTagName("input");
+
+  // Loop through the input elements
+  for (var i = 0; i < inputFields.length; i++) {
+    // Disable the input field
+    inputFields[i].disabled = true;
+  }
+}
 // Function to hide the pop-up
 function hidePopup() {
   document.getElementById("popupContent1").style.display = "none";
